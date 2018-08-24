@@ -205,6 +205,9 @@
       </dependency>
     </dependencies>
   </dependencyManagement>
+
+
+
 <!--
   <scm>
     <connection>scm:git:git@github.com:jleetutorial/maven-project.git</connection>
