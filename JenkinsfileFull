@@ -33,6 +33,9 @@ stages{
                     steps {
                         echo 'running PWD'
                         sh "pwd"
+                        echo 'runnung WHOAMI'
+                        echo 'whoami'
+                        echo 'ls -la'
                         sh "scp -i /Users/Daniel/Projects/Jenkins/tomcat-demo.pem **/target/*.war ec2-user@${params.tomcat_dev}:/var/lib/tomcat/webapps"
                     }
                 }
