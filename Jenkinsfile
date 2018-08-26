@@ -1,5 +1,8 @@
 pipeline {
     agent any
+  /*  tools {
+        maven ''
+    }*/
     stages{
         stage('Build'){
             steps {
@@ -23,7 +26,8 @@ pipeline {
                 timeout(time:5, unit:'DAYS'){
                     input message:'Approve PRODUCTION Deployment?'
                 }
-                build job: 'deploy-to-prod'
+
+                build job: 'deploy-to-Prod'
             }
             post {
                 success {
