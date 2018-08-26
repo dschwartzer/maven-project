@@ -35,9 +35,9 @@ stages{
                         sh "pwd"
                         echo 'runnung WHOAMI'
                         sh "whoami"
-                        sh "chmod 777 ./webapps/target/*.war"
+                        sh "chmod 777 ./webapp/target/*.war"
                         sh "ls -la ./webapp/target/"
-                        sh "scp -i /Users/Daniel/Projects/Jenkins/tomcat-demo.pem **/target/*.war ec2-user@${params.tomcat_dev}:/var/lib/tomcat/webapps"
+                        sh "scp -i /Users/Daniel/Projects/Jenkins/tomcat-demo.pem ./webapp/target/*.war ec2-user@${params.tomcat_dev}:/var/lib/tomcat/webapps"
                     }
                 }
 
