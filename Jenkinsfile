@@ -1,12 +1,12 @@
 pipeline {
     agent any
-  /*  tools {
-        maven ''
-    }*/
+    tools {
+        maven 'Maven-3.5.4'
+    }
     stages{
         stage('Build'){
             steps {
-                sh '/usr/local/bin/mvn clean package'
+                sh 'mvn clean package'
             }
             post {
                 success {
