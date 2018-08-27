@@ -2,7 +2,6 @@ pipeline {
     agent any
     tools {
         maven 'Maven-3.5.4'
-        docker 'MyDocker'
     }
 
     stages {
@@ -10,7 +9,7 @@ pipeline {
             steps {
 /*                sh 'mvn clean package' */
 /*                sh 'docker build . -t tomcatwebapp:${env.BUILD_ID}' */
-                sh 'docker build . -t tomcatwebapp:5'
+                sh '/usr/local/bin/docker build . -t tomcatwebapp:5'
             }
         }
     }
