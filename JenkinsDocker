@@ -12,7 +12,7 @@ pipeline {
 /*                sh '/usr/local/bin/docker build . -t tomcatwebapp:5' */
                 sh 'mvn clean package'
                 sh 'echo $PATH'
-                sh 'docker build .'
+                sh "docker build . -t tomcatwebapp:${env.BUILD_ID}"
             }
         }
     }
