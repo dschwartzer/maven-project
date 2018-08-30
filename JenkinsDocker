@@ -8,6 +8,7 @@ pipeline {
         stage ('Build') {
             steps {
                 sh 'mvn clean package'
+                sh 'whoami'
                 sh 'echo $PATH'
                 sh '/usr/local/bin/docker ps -a'
                 sh "docker build . -t tomcatwebapp:${env.BUILD_ID}"
